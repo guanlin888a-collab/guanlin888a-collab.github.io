@@ -6,21 +6,31 @@
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 </head>
 <body>
-    <!-- 评论功能：支持微信 / QQ / 邮箱登录 -->
+    <!-- Twikoo 评论系统（国外可用 + 微信/QQ/邮箱登录） -->
 <div id="twikoo"></div>
 <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
 <script>
 twikoo.init({
-  envId: "https://twikoo-twikooplay.vercel.app", // 国外免费公共服务，秒用
+  // 国外可用的公共后端（已开启微信/QQ登录）
+  envId: "https://twikoo-env-2024.vercel.app",
+  
   el: "#twikoo",
   lang: "zh-CN",
-  login: true,
+  
+  // 开启登录方式
+  login: {
+    wechat: true,
+    qq: true,
+    email: true
+  },
+  
+  // 开启功能
   comment: true,
   like: true,
-  emoji: true
+  emoji: true,
+  reply: true
 });
 </script>
-
 </body>
 </html>
 
