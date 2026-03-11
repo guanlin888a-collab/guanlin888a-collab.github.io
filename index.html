@@ -6,27 +6,18 @@
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 </head>
 <body>
-    <!-- Waline 评论系统（国外可用 + 微信/QQ/邮箱登录） -->
-<div id="waline"></div>
+    <div id="waline"></div>
 <script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-  init({
-    el: '#waline',
-    // 国外稳定公共后端
-    serverURL: 'https://waline-public.vercel.app',
-    lang: 'zh-CN',
-    // 强制登录才能评论
-    login: 'force',
-    // 开启微信/QQ/邮箱登录
-    social: ['wechat', 'qq', 'email'],
-    // 开启功能
-    reaction: true,
-    comment: true,
-    like: true
-  });
+import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+init({
+  el: "#waline",
+  serverURL: "https://my-waline-comment-five.vercel.app",
+  lang: "zh-CN",
+  login: "force",
+  social: ["wechat", "qq", "email"],
+});
 </script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
-   
 </body>
 </html>
 
