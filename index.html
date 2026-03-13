@@ -2,22 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个网页</title>
+    <title>我的网页</title>
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
 </head>
 <body>
+    <h1>欢迎来到我的网页</h1>
     <div id="waline"></div>
-<script type="module">
-import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-init({
-  el: "#waline",
-  serverURL: "https://my-waline-comment-five.vercel.app",
-  lang: "zh-CN",
-  login: "force",
-  social: ["wechat", "qq", "email"],
-});
-</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+        
+        init({
+            el: "#waline",
+            serverURL: "https://my-waline-comment-five.vercel.app",
+            lang: "zh-CN",
+            path: '/',  /* <-- 就是加了这一行，强制读取根目录的评论 */
+        });
+    </script>
 </body>
 </html>
 
